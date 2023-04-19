@@ -7,9 +7,63 @@
 
 html {
     background-color: #fbfbfb;
-    font-size: 36px;
+    font-size: 18px; /* Tamaño de letra base para dispositivos móviles */
 }
 
+
+/*@media screen and (max-width: 800px) {
+  html {
+    font-size: 27px;  Tamaño de letra base para dispositivos móviles 
+  }
+}*/
+
+/*@media screen and (max-width: 600px) {
+    html {
+      font-size: 22px;  Tamaño de letra base para dispositivos móviles 
+    }
+    #menu {
+        width: 55%;
+        height: 10%;
+        background: rgb(5, 5, 5);
+    }
+    #div1 {
+        width: 45%;
+        background: rgb(5, 5, 5);
+    }
+  }*/
+
+/*@media screen and (max-width: 510px) {
+    html {
+      font-size: 18px;  Tamaño de letra base para dispositivos móviles 
+    }
+    #div1 {
+        width: 45%;
+        background: rgb(145, 20, 20);
+    }
+    #menu {
+        width: 55%;
+        height: 10%;
+        background: rgb(148, 20, 20);
+    }
+  }*/
+
+/*  @media screen and (max-width: 400px) {
+    #menu {
+        width: 55%;
+        height: 10%;
+        background: rgb(5, 5, 5);
+    }   
+    html {
+      font-size: 16px;  Tamaño de letra base para dispositivos móviles 
+    }
+    #div1 {
+        width: 45%;
+        background: rgb(5, 5, 5);
+    }
+
+  }*/
+
+  
 /* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
 *  cuyos valores asigna por defecto el navegador.
 */
@@ -44,7 +98,7 @@ a {
 *  el margin: auto; para tenerlo centrado fácilmente ;)
 */
 main {
-    max-width: 1200px;
+    /*max-width: 1200px;*/
     margin: auto;
     overflow-y: scroll;
     height: calc(100vh - 90px); 
@@ -71,11 +125,11 @@ main {
 
 body {
     margin-top: 90px; 
-    /*font-size: 50%;*/
-  }
+}
+
 header {
     width: 100%;
-    height: 100px;
+    height: 90px;
     display: flex;
     justify-content: space-around;;
     align-items: center;
@@ -94,35 +148,57 @@ h2 {
     padding-bottom: 10px;
 }
 
+p, ul {
+    font-size: 50%;    
+}
 #logo {
     font-family: 'Satisfy', cursive;
     font-size: 100%;
 }
 
 
-div{
-    background-color: #cdf008;  
-}
+
 #div1 {
     display: flex;
     flex-direction:column;
     align-items: center;
     justify-content: center; 
     line-height: 35px;
+    width: 35%;
 }
-nav > ul {
+
+#menu {
+    width: 65%;
+    height: 50%;
+    background-color: #af599e;
+    font-size: 40%;
+    border-radius: 5px;
+    margin-right: 5px;
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
     align-items: center;
 }
 
+.menuop {
+    display:inline-block;
+    background: rgba(153, 204, 255, 0.5);
+    color: white;
+    /*height: 50%;*/
+    padding: 1%;
+    border-radius: 5px;
+}
+
+.menuop:hover {
+    background: #d8d8da;
+    color: black;
+}
 #div2{
     display: flex;
     justify-content: center;
 }
 
 #foto{
-    width: 400px;
+    width: 350px;
     border-radius: 50%
 }
 
@@ -137,35 +213,51 @@ nav > ul {
     padding-bottom: 7px;
 }
 
-nav {
-    width: 50%;
-    /*max-width: 300px;*/
+
+   
+
+
+
+/*nav {
+    width: 65%;
+                         max-width: 300px;
     height: 50px;
     background-color: aqua;
     font-size: 80%;
+}*/
+
+/*nav > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap; 
 }
 
-p, ul {
-    font-size: 50%;    
-}
 
 nav > ul > li {
-    /*display: flex;
+    display: flex;
     flex-direction: column;
-    justify-content: center;*/
+    justify-content: center;
+    border: 1px solid #000;
     color: #1d1d6e;
-    margin: 0 0.2rem;
-    padding: 0.2rem;
+    margin: 0 10px;
+    padding: 5px;
+    /*padding: 0.2rem;
     display: block;
     line-height:12px;
-  }
+}
 
-  nav > ul > li:hover {
+nav > ul > li:hover {
     background-color: #dfdfe2;
     color: #1b1b32;
     cursor: pointer;
-  }
-  .boton {
+} */
+
+article {
+    margin: 10px 0;
+}
+
+.boton {
     display: inline-block;
     padding: 10px 20px;
     background-color:#af599e;
@@ -173,26 +265,17 @@ nav > ul > li {
     font-weight: bold;
     font-size: 56%;
     border-radius: 25px;
-  }
+}
   
-  .boton:hover {
+.boton:hover {
     /*background-color: #000;*/
     color: #000;
-  }
+}
 
-  footer {
-    height: 90px;
-    width: 100%;
-    display: flex;
-    background-color: #af599e;
-    color: #fbfbfb;
-    align-items: center;
-    justify-content:space-around; 
-    font-size: 50%;
-} 
+
 .icono {
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     /*flex: auto;*/
 }
 
@@ -210,15 +293,38 @@ nav > ul > li {
 }
 
 .espacio {
-    padding-left: 48px;
+    padding-left: 54px;
 }
-main > ul {
-    background-color: #cdf008;
-    padding: 20px;
-}
+
 #Publicaciones > ul {
     list-style: square;
     padding-left: 20px;
 }
 
- 
+footer {
+    height: 90px;
+    width: 100%;
+    background-color: #af599e;
+    color: #fbfbfb; 
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 50%;
+    border-radius: 25px;
+} 
+
+#foot1{
+    width: 100%;
+    display:flex;
+    justify-content:space-around; 
+    align-items: center;
+}
+#foot2{
+    display:flex;
+}
+/*
+div{
+    background-color: #cdf008;  
+}
+*/
