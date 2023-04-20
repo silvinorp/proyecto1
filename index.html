@@ -8,6 +8,22 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
+
+
+    <!--
+        Esta fueron las formas que encontré (investigando) de evitar que, al actualizar la página (F5), esta se fuera a la última opción 
+        que se había seleccionado en el menú.
+        Al colocar alguno de estos códigos se logra que al actualizar la página, siempre esté al inicio.
+
+        <script>
+           if (window.location.hash) {
+             window.location.href = window.location.href.replace(/#.*$/, '');
+            }
+        </script>
+    --> 
+    <script>history.scrollRestoration = 'manual';</script>
+    
+
 </head>
 <body>
     <header>
@@ -16,18 +32,7 @@
           <h1 id="logo">Rodríguez Pulido</h1>
         </div>
 
-        <!--<nav>
-            <ul>
-                <li><a href="#div2">Inicio</a></li>
-                <li><a href="#Experiencia-Laboral">Experiencia<br>Laboral</a></li>
-                <li><a href="#Estudios-Realizados">Estudios<br>Realizados</a></li>
-                <li><a href="#Cursos-Seminarios">Cursos y<br>Seminarios</a></li>
-                <li><a href="#Publicaciones">Publicaciones</a></li>
-                <li><a href="#Contacto">Contacto</a></li>
-            </ul>
-        </nav>  -->  
-
-        <nav  id="menu">
+         <nav  id="menu">
             <a href="#div2" class="menuop">Inicio</a>
             <a href="#Experiencia-Laboral" class="menuop">Experiencia<br>Laboral</a>
             <a href="#Estudios-Realizados" class="menuop">Estudios<br>Realizados</a>
@@ -63,7 +68,7 @@
             
 		</article>
         <div id="div2">
-			<a class="boton">Descargar mi CV</a>
+			<a href="https://drive.google.com/file/d/1LAoMC7E5VIP8UL0wVbpKzHmjlcqJ5hu5/view?usp=share_link" target="_blank" class="boton">Descargar mi CV</a>
 		</div>
         
 		<article class="Art2" id="Experiencia-Laboral"> 
@@ -127,14 +132,15 @@
 
     <footer id="Contacto">
         <div id="foot1">
-            <img class="icono" src="css/iconos/dire.svg" alt="Dirección"><h5>9 de Julio 304, Carmen de Patagones, Buenos Aires.</h5>
-            <img class="icono" src="css/iconos/tele.svg" alt="Teléfono"><h5>+54 91130 953959.</h5>
-        </div>
-        <div id="foot1">
             <a href="mailto:silvinorp@gmail.com"><img class="icono" src="css/iconos/email.svg" alt="Email"></a>
             <a href="https://www.linkedin.com/in/silvino-rodriguez-50b69255/" target="_blank"><img class="icono" src="css/iconos/linkedin.svg" alt="LinkedIn"></a>
             <a href="https://www.facebook.com/silvinorp/" target="_blank"><img class="icono" src="css/iconos/facebook.svg" alt="Facebook"></a>            
         </div>
+        <div id="foot1">
+            <div id="foot2"><img class="icono" src="css/iconos/dire.svg" alt="Dirección"><h5>9 de Julio 304, Carmen de Patagones, Buenos Aires.</h5></div>
+            <div id="foot2"><img class="icono" src="css/iconos/tele.svg" alt="Teléfono"><h5>+54 91130 953959.</h5></div>
+        </div>
+
     </footer>
 
 	</main>
