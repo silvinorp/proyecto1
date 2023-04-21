@@ -11,16 +11,18 @@
 
 
     <!--
-        Esta fueron las formas que encontré (investigando) de evitar que, al actualizar la página (F5), esta se fuera a la última opción 
+        Esta fueron las dos formas que encontré (investigando) de evitar que, al actualizar la página (F5), esta se fuera a la última opción 
         que se había seleccionado en el menú.
         Al colocar alguno de estos códigos se logra que al actualizar la página, siempre esté al inicio.
-
+         
+        FORMA 1
         <script>
            if (window.location.hash) {
              window.location.href = window.location.href.replace(/#.*$/, '');
             }
         </script>
-    --> 
+
+    FORMA 2 --> 
     <script>history.scrollRestoration = 'manual';</script>
     
 
@@ -68,7 +70,8 @@
             
 		</article>
         <div id="div2">
-			<a href="https://drive.google.com/file/d/1LAoMC7E5VIP8UL0wVbpKzHmjlcqJ5hu5/view?usp=share_link" target="_blank" class="boton">Descargar mi CV</a>
+			<a href="https://drive.google.com/file/d/1LAoMC7E5VIP8UL0wVbpKzHmjlcqJ5hu5/view?usp=share_link" 
+               target="_blank" class="boton">Descargar mi CV</a>
 		</div>
         
 		<article class="Art2" id="Experiencia-Laboral"> 
@@ -144,10 +147,6 @@
     </footer>
 
 	</main>
-
-
-
-
 
 </body>
 
